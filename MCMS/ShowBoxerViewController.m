@@ -9,7 +9,9 @@
 #import "ShowBoxerViewController.h"
 
 @interface ShowBoxerViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *boxerLabel;
+@property (weak, nonatomic) IBOutlet UITextView *boxerTextView;
+@property (weak, nonatomic) IBOutlet UITextView *specialMoveTextView;
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
 @property BOOL isEditing;
 @end
@@ -19,8 +21,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    
+    
     self.title = self.boxer.name;
-    self.boxerLabel.text = self.boxer.specialMove;
+    self.boxerTextView.text = self.boxer.name;
+    self.specialMoveTextView.text = self.boxer.specialMove;
+    self.specialMoveTextView.editable = NO;
+    self.boxerTextView.editable = NO;
+
+
     self.isEditing = false;
     
     
@@ -31,11 +41,17 @@
 //    [sender setTitle:@"Done"];
     if (self.isEditing == true) {
         [sender setTitle:@"Done"];
+        self.boxerTextView.editable = YES;
+        self.specialMoveTextView.editable = YES;
     } else {
         [sender setTitle:@"Edit"];
         
     }
     
+
+    
+
+
     
     
 }
