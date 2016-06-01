@@ -10,7 +10,8 @@
 
 @interface ShowBoxerViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *boxerLabel;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
+@property BOOL isEditing;
 @end
 
 @implementation ShowBoxerViewController
@@ -20,10 +21,42 @@
     
     self.title = self.boxer.name;
     self.boxerLabel.text = self.boxer.specialMove;
+    self.isEditing = false;
     
     
     
 }
+- (IBAction)onEditButtonTapped:(UIBarButtonItem *)sender {
+    self.isEditing = !self.isEditing;
+//    [sender setTitle:@"Done"];
+    if (self.isEditing == true) {
+        [sender setTitle:@"Done"];
+    } else {
+        [sender setTitle:@"Edit"];
+        
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+//- (IBAction)onEditButtonTapped:(UIButton *)sender {
+//    self.editing = YES;
+//    [sender setTitle:@"Done" forState:UIControlStateNormal];
+//    [self.tableView setEditing:!self.tableView.editing];
+//    if (self.isEditing) {
+//        [sender setTitle:@"Edit" forState:UIControlStateNormal];;
+//        self.isEditing = false;
+//    } else {
+//        [sender setTitle:@"Done" forState:UIControlStateNormal];;
+//        self.isEditing = true;
+//    }
+//}
 
 
 

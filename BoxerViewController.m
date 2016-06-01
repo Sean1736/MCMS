@@ -9,6 +9,7 @@
 #import "BoxerViewController.h"
 #import "Boxer.h"
 #import "ShowBoxerViewController.h"
+
 @interface BoxerViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
@@ -51,6 +52,7 @@
     
     Boxer *newBoxer = [[Boxer alloc] initWithName:self.nameTextField.text andSpecialMove:self.specialMoveTextField.text];
     [self.boxers addObject:newBoxer];
+    
     // This clears text fields after clicking add.
     self.nameTextField.text = [NSString stringWithFormat:@""];
     self.specialMoveTextField.text = [NSString stringWithFormat:@""];
