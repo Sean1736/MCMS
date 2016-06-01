@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P3n-eA-bva">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P3n-eA-bva">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Boxers of the Century-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="BoxerViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="BoxerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,10 +21,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="181" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellID" textLabel="Gqr-ZE-D98" detailTextLabel="gm2-Uv-TMY" rowHeight="64" style="IBUITableViewCellStyleSubtitle" id="6wE-E9-FKX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellID" textLabel="Gqr-ZE-D98" detailTextLabel="gm2-Uv-TMY" rowHeight="64" style="IBUITableViewCellStyleSubtitle" id="6wE-E9-FKX">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6wE-E9-FKX" id="Hio-MS-GKW">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="63.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="63.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gqr-ZE-D98">
@@ -45,52 +43,116 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Fu6-tT-I3E" kind="push" identifier="ShowBoxerSegue" id="XNL-VE-hSo"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="148" width="400" height="452"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="VdM-dV-Yhd"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="MPa-aH-X4H"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R31-ZE-toO">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="9" y="72" width="340" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ucZ-X0-lxj">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="9" y="110" width="340" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgf-Vi-uzW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="362" y="93" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onAddButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KLJ-ue-Gso"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="vzh-3I-KWv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="R47-K6-qif"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vzh-3I-KWv" secondAttribute="bottom" id="aPd-bh-wR8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vzh-3I-KWv" secondAttribute="trailing" constant="-20" id="bwV-u1-EF7"/>
-                            <constraint firstItem="vzh-3I-KWv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="hat-YX-9Ju"/>
-                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="vzh-3I-KWv"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="aPd-bh-wR8"/>
-                                <exclude reference="R47-K6-qif"/>
-                                <exclude reference="bwV-u1-EF7"/>
-                                <exclude reference="hat-YX-9Ju"/>
+                                <exclude reference="R31-ZE-toO"/>
+                                <exclude reference="ucZ-X0-lxj"/>
+                                <exclude reference="Vgf-Vi-uzW"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="vzh-3I-KWv"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="aPd-bh-wR8"/>
-                                <include reference="R47-K6-qif"/>
-                                <include reference="bwV-u1-EF7"/>
-                                <include reference="hat-YX-9Ju"/>
+                                <include reference="R31-ZE-toO"/>
+                                <include reference="ucZ-X0-lxj"/>
+                                <include reference="Vgf-Vi-uzW"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Boxers of the Century" id="Zck-rC-8GW"/>
                     <connections>
+                        <outlet property="nameTextField" destination="R31-ZE-toO" id="npC-jF-reY"/>
+                        <outlet property="specialMoveTextField" destination="ucZ-X0-lxj" id="Ekr-Ko-Rbs"/>
                         <outlet property="tableView" destination="vzh-3I-KWv" id="chD-ls-6pU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="999" y="976"/>
+        </scene>
+        <!--Show Boxer View Controller-->
+        <scene sceneID="c0s-ke-Ukk">
+            <objects>
+                <viewController id="Fu6-tT-I3E" customClass="ShowBoxerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hlI-s0-Gg3"/>
+                        <viewControllerLayoutGuide type="bottom" id="84J-4f-ayd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5vq-wL-WJW">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRm-UD-fsB">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="271" width="400" height="39"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="fRm-UD-fsB"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="fRm-UD-fsB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="6cc-re-8DP"/>
+                    <connections>
+                        <outlet property="boxerLabel" destination="fRm-UD-fsB" id="aCX-BM-BaT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NUY-Ux-DIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726.5" y="976"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="unx-Iw-WS2">

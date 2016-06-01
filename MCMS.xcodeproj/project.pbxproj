@@ -14,6 +14,7 @@
 		462A67811CFF6C9C00E8710F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462A677F1CFF6C9C00E8710F /* LaunchScreen.storyboard */; };
 		462A678A1CFF6ED400E8710F /* BoxerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462A67891CFF6ED400E8710F /* BoxerViewController.m */; };
 		462A678D1CFF6F0A00E8710F /* Boxer.m in Sources */ = {isa = PBXBuildFile; fileRef = 462A678C1CFF6F0A00E8710F /* Boxer.m */; };
+		462A67901CFF833200E8710F /* ShowBoxerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462A678F1CFF833200E8710F /* ShowBoxerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		462A67891CFF6ED400E8710F /* BoxerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BoxerViewController.m; path = ../BoxerViewController.m; sourceTree = "<group>"; };
 		462A678B1CFF6F0A00E8710F /* Boxer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boxer.h; sourceTree = "<group>"; };
 		462A678C1CFF6F0A00E8710F /* Boxer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Boxer.m; sourceTree = "<group>"; };
+		462A678E1CFF833200E8710F /* ShowBoxerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowBoxerViewController.h; sourceTree = "<group>"; };
+		462A678F1CFF833200E8710F /* ShowBoxerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowBoxerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 				462A67751CFF6C9C00E8710F /* AppDelegate.m */,
 				462A67881CFF6ED400E8710F /* BoxerViewController.h */,
 				462A67891CFF6ED400E8710F /* BoxerViewController.m */,
+				462A678E1CFF833200E8710F /* ShowBoxerViewController.h */,
+				462A678F1CFF833200E8710F /* ShowBoxerViewController.m */,
 				462A678B1CFF6F0A00E8710F /* Boxer.h */,
 				462A678C1CFF6F0A00E8710F /* Boxer.m */,
 				462A677A1CFF6C9C00E8710F /* Main.storyboard */,
@@ -156,6 +161,7 @@
 			files = (
 				462A678A1CFF6ED400E8710F /* BoxerViewController.m in Sources */,
 				462A67761CFF6C9C00E8710F /* AppDelegate.m in Sources */,
+				462A67901CFF833200E8710F /* ShowBoxerViewController.m in Sources */,
 				462A678D1CFF6F0A00E8710F /* Boxer.m in Sources */,
 				462A67731CFF6C9C00E8710F /* main.m in Sources */,
 			);
