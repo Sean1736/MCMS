@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P3n-eA-bva">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P3n-eA-bva">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Boxer View Controller-->
+        <!--Boxers of the Century-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="BoxerViewController" sceneMemberID="viewController">
@@ -19,13 +20,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vzh-3I-KWv">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="181" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellID" rowHeight="64" id="6wE-E9-FKX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellID" textLabel="Gqr-ZE-D98" detailTextLabel="gm2-Uv-TMY" rowHeight="64" style="IBUITableViewCellStyleSubtitle" id="6wE-E9-FKX">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6wE-E9-FKX" id="Hio-MS-GKW">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="63.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gqr-ZE-D98">
+                                                    <rect key="frame" x="15" y="16" width="31.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gm2-Uv-TMY">
+                                                    <rect key="frame" x="15" y="35.5" width="40.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -47,10 +65,10 @@
                                 <exclude reference="vzh-3I-KWv"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="aPd-bh-wR8"/>
                                 <exclude reference="R47-K6-qif"/>
                                 <exclude reference="bwV-u1-EF7"/>
                                 <exclude reference="hat-YX-9Ju"/>
-                                <exclude reference="aPd-bh-wR8"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -58,14 +76,14 @@
                                 <include reference="vzh-3I-KWv"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="aPd-bh-wR8"/>
                                 <include reference="R47-K6-qif"/>
                                 <include reference="bwV-u1-EF7"/>
                                 <include reference="hat-YX-9Ju"/>
-                                <include reference="aPd-bh-wR8"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Zck-rC-8GW"/>
+                    <navigationItem key="navigationItem" title="Boxers of the Century" id="Zck-rC-8GW"/>
                     <connections>
                         <outlet property="tableView" destination="vzh-3I-KWv" id="chD-ls-6pU"/>
                     </connections>

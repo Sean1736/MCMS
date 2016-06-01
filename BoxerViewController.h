@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Boxer.h"
 
 @interface BoxerViewController : UIViewController
 

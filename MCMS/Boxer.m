@@ -10,4 +10,13 @@
 
 @implementation Boxer
 
+-(instancetype)initWithName:(NSString *)name andSpecialMove:(NSString *)specialMove {
+    self = [super init];
+    if (self) {
+        self.name = name;
+        self.specialMove = specialMove;
+    }
+    return self;
+}
+
 @end

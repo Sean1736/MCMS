@@ -65,9 +65,9 @@
 				462A67751CFF6C9C00E8710F /* AppDelegate.m */,
 				462A67881CFF6ED400E8710F /* BoxerViewController.h */,
 				462A67891CFF6ED400E8710F /* BoxerViewController.m */,
-				462A677A1CFF6C9C00E8710F /* Main.storyboard */,
 				462A678B1CFF6F0A00E8710F /* Boxer.h */,
 				462A678C1CFF6F0A00E8710F /* Boxer.m */,
+				462A677A1CFF6C9C00E8710F /* Main.storyboard */,
 				462A677D1CFF6C9C00E8710F /* Assets.xcassets */,
 				462A677F1CFF6C9C00E8710F /* LaunchScreen.storyboard */,
 				462A67821CFF6C9C00E8710F /* Info.plist */,
@@ -308,6 +308,7 @@
 				462A67871CFF6C9C00E8710F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

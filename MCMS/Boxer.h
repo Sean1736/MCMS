@@ -10,6 +10,8 @@
 
 @interface Boxer : NSObject
 @property NSString *name;
+@property NSString *specialMove;
 
+-(instancetype)initWithName:(NSString *)name andSpecialMove:(NSString *)specialMove;
 
 @end

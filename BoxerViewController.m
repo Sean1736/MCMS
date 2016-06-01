@@ -7,8 +7,9 @@
 //
 
 #import "BoxerViewController.h"
+#import "Boxer.h"
 
-@interface BoxerViewController ()
+@interface BoxerViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property NSMutableArray *boxers;
 @end
@@ -17,14 +18,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    Boxer *rocky = [[Boxer alloc] initWithName:@"Rocky Balboa" andSpecialMove:@"Eye of the Tiger"];
+     Boxer *apollo = [[Boxer alloc] initWithName:@"Apollo Creed" andSpecialMove:@"The Creed Finisher"];
+     Boxer *clubber = [[Boxer alloc] initWithName:@"Clubber Lang" andSpecialMove:@"Pity the Fool"];
+     Boxer *ivan = [[Boxer alloc] initWithName:@"Ivan Drago" andSpecialMove:@"Soviet Bomb"];
+    Boxer *tommy = [[Boxer alloc] initWithName:@"Tommy Gunn" andSpecialMove:@"Mad Gunner"];
+    self.boxers = [NSMutableArray arrayWithObjects:rocky, apollo, clubber, ivan, tommy, nil];
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-   
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.boxers.count;
 }
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
+    Boxer *boxer = self.boxers[indexPath.row];
+    cell.textLabel.text = boxer.name;
+    cell.detailTextLabel.text = boxer.specialMove;
+    return cell;
+    
+}
 
 
 @end
