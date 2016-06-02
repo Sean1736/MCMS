@@ -37,9 +37,13 @@
     return cell;
     
 }
-//-(void)viewWillAppear:(BOOL)animated{
-//    [self.tableView reloadData];
-//}
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self.tableView reloadData];
+}
+
+
 
 -(void)generateStartingBoxers{
     Boxer *rocky = [[Boxer alloc] initWithName:@"Rocky Balboa" andSpecialMove:@"Eye of the Tiger"];
@@ -69,13 +73,15 @@
     dvc.boxer = self.boxers[indexPath.row];
 }
 
--(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
-    if ([self.nameTextField.text isEqualToString:@""]) {
-        return NO;
-    } else {
-        return YES;
-    }
-}
+
+
+//-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+//    if ([self.nameTextField.text isEqualToString:@""]) {
+//        return NO;
+//    } else {
+//        return YES;
+//    }
+//}
 
 
 

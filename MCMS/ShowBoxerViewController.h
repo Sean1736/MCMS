@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Boxer.h"
+//@protocol ShowBoxerViewControllerDelegate <NSObject>
+//- (void)addItemViewController:(ShowBoxerViewController *)controller didFinishEnteringItem:(NSString *)item;
+//@end
 @interface ShowBoxerViewController : UIViewController
+
+
 @property Boxer *boxer;
+
 @end

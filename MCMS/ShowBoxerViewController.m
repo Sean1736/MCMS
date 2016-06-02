@@ -20,15 +20,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
+
     
     self.title = self.boxer.name;
     self.boxerTextView.text = self.boxer.name;
     self.specialMoveTextView.text = self.boxer.specialMove;
-    self.specialMoveTextView.editable = NO;
-    self.boxerTextView.editable = NO;
+//    self.specialMoveTextView.editable = NO;
+//    self.boxerTextView.editable = NO;
 
 
     self.isEditing = false;
@@ -36,25 +34,43 @@
     
     
 }
+
 - (IBAction)onEditButtonTapped:(UIBarButtonItem *)sender {
-    self.isEditing = !self.isEditing;
-//    [sender setTitle:@"Done"];
-    if (self.isEditing == true) {
-        [sender setTitle:@"Done"];
-        self.boxerTextView.editable = YES;
-        self.specialMoveTextView.editable = YES;
-    } else {
-        [sender setTitle:@"Edit"];
+    if([sender.title isEqualToString:@"Edit"]){
+        sender.title = @"Done";
+        self.boxerTextView.text = self.boxer.name;
+        
+        self.specialMoveTextView.text = self.boxer.specialMove;
+        
+        [self.boxerTextView resignFirstResponder];
+        
+        
+        
+    }else{
+        
+        
+        sender.title = @"Edit";
+        self.boxer.name = self.boxerTextView.text;
+        
+        self.boxer.specialMove = self.specialMoveTextView.text;
+        
+        
+        [self.specialMoveTextView resignFirstResponder];
+        
+        
+        
         
     }
-    
+        
+        
+        
+    }
 
     
 
 
     
     
-}
 
 
 
